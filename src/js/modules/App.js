@@ -6,31 +6,12 @@ import Image from 'grommet/components/Image';
 import Footer from 'grommet/components/Footer';
 
 export default React.createClass({
-  getInitialState: function() {
-    return {
-      userName: '',
-      userEmail: '',
-      userRole: ''
-    };
-  },
-  componentDidMount: function() {
-    this.serverRequest = $.get('https://datagovernance-dev.itcs.hpecorp.net:1337/WhoAmI', function (result) {
-      var results=JSON.parse(result);
-      this.setState({      
-        userName: results.name
-      });
-    }.bind(this));
-  },
-
   render() {
     return (
 	<div>
 		<Header justify="between" colorIndex="neutral-1" pad={{"horizontal": "medium"}} role="nav">
 			<Image src="img/Logo.jpg" size="small" />
 				<Menu direction="row" size="medium">
-					<NavLink to="/#">
-						{this.state.userName}
-					</NavLink>
 					 <NavLink to="/D3_v4_er">
 						Entity Relationship Diagram
 					</NavLink>
