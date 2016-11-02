@@ -1,6 +1,6 @@
 # reactjs-D3-V4-grommet
 
-This example demonstrates how to create a Entiry-Relationship diagram using D3 Version 4 (V4) running on reactjs. Grommet is also used as the styling framework. See live example here [Live Dashboard](http://54.201.121.249:3130) 
+This example demonstrates how to create a Entiry-Relationship diagram using D3 Version 4 (V4) running on reactjs. Grommet is also used as the styling framework. See live example here [Live Dashboard](http://54.201.121.249:3130/#/D3_v4_er) 
 
 ## Instructions
 
