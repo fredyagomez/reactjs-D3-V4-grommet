@@ -5,7 +5,7 @@ import Menu from 'grommet/components/Menu';
 import Image from 'grommet/components/Image';
 import Footer from 'grommet/components/Footer';
 
-export default class D3_V4_grommet extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <div>
