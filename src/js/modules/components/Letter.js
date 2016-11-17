@@ -10,17 +10,12 @@ const ExitColor = 'blue',
 class AttributesMap extends Component {
   constructor () {
     super();
-    //this._OnClick = this._OnClick.bind(this);
-    //this._onClose = this._onClose.bind(this);
     this.state = {y: 0, x: 0, color: EnterColor, fillOpacity: 1e-6};
   }
-  //state = {y: -60, x: 0, color: EnterColor, fillOpacity: 1e-6}
 
   componentWillEnter(callback) {
     let node = d3.select(ReactDOM.findDOMNode(this));
-
     this.setState({x: this.props.i*32});
-
     node.transition(this.props.transition)
       .attr('y', 60)
       .style('fill-opacity', 1)
@@ -30,7 +25,6 @@ class AttributesMap extends Component {
       });
   }
 
-  
   componentWillLeave(callback) {
     let node = d3.select(ReactDOM.findDOMNode(this));
     this.setState({color: ExitColor});
@@ -57,11 +51,9 @@ class AttributesMap extends Component {
 
   render() {
     return (
-				
-			<text dy=".35em" y={this.state.y} x={this.state.x} style={{fillOpacity: this.state.fillOpacity, fill: this.state.color, font: 'bold 48px monospace'}}>
+	    <text dy=".35em" y={this.state.y} x={this.state.x} style={{fillOpacity: this.state.fillOpacity, fill: this.state.color, font: 'bold 48px monospace'}}>
                 {this.props.letter}
-            </text>
-				
+            </text>			
     );
   }
 };
