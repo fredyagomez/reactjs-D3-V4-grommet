@@ -23,9 +23,6 @@ class Playing extends Component {
   render() {
     let x = this.props.letterx;
     let y = this.props.lettery;
-    //let y = this.props.i;
-    //console.log(x);
-    //console.log(y);
     return (
 	<rect y={y} x={x}  rx="6" ry="6" width="176" height="130.76923076923077" stroke="black" style={{fillOpacity: this.state.fillOpacity, fill: this.state.color}}> 
         </rect>				
