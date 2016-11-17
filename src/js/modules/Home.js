@@ -92,7 +92,7 @@ export default class Home extends React.Component {
         </div>);
   }
 };
-	    
-	    contextTypes: {
-    router: React.PropTypes.object
-  }
+Home.propTypes= {
+  router: PropTypes.object
+};
+
