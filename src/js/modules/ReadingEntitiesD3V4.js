@@ -1,8 +1,3 @@
-//********************************************************************
-// (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
-//  Fredy Gomez   November 14 2016  -  Create first version
-//  
-//********************************************************************
 
 import React from 'react';
 import * as d3 from 'd3';
@@ -16,7 +11,6 @@ import TableRow from 'grommet/components/TableRow';
 import Layer from 'grommet/components/Layer';
 import Heading from 'grommet/components/Heading';
 import ReactTransitionGroup from 'react-addons-transition-group';
-
 
 export default class ReadingEntitiesD3V4 extends React.Component {
   constructor() {
