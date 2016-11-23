@@ -43,7 +43,6 @@ export default class ReadingEntitiesD3V4 extends React.Component {
   parentHandleClick () {
     this.setState({flag_rightTable: true});
   }
-  
   _onClose () {
     this.setState({flag_rightTable: false});
   }
@@ -64,7 +63,7 @@ export default class ReadingEntitiesD3V4 extends React.Component {
         search_entity2.push(entity2);
         let transition = d3.transition().duration(2050).ease(d3.easeCubicInOut);
         return (
-	       <DiagramBox onClick={this.parentHandleClick} model={model} relationship={x_pos.relationship} attributes={x_pos.attributes} entity={x_pos.name} letterx={x_pos.xpos} color={x_pos.color} length={x_pos.length} lettery={x_pos.ypos} i={xindex} key={`letter-${x_pos.x}${xindex}`} transition={transition} search_entity={search_entity2}/>		 
+	       <DiagramBox onClick={this.parentHandleClick} model={model} relationship={x_pos.relationship} attributes={x_pos.attributes} entity={x_pos.name} letterx={x_pos.xpos} color={x_pos.color} length={x_pos.length} lettery={x_pos.ypos} i={xindex} key={`letter-${x_pos.x}${xindex}`} transition={transition} search_entity={search_entity2} />		 
         );
       }
       return true;
@@ -77,7 +76,7 @@ export default class ReadingEntitiesD3V4 extends React.Component {
         let y = x_pos.ypos + 20;
         let x = x_pos.xpos + 5;
         return (
-	       <DiagramTitle model={model} relationship={x_pos.relationship} attributes={x_pos.attributes} entity={x_pos.name} letterx={x} color={x_pos.color} length={x_pos.length} lettery={y} i={xindex} key={`letter-${x_pos.x}${xindex}`} transition={transition}/>		 
+	  <DiagramTitle model={model} relationship={x_pos.relationship} attributes={x_pos.attributes} entity={x_pos.name} letterx={x} color={x_pos.color} length={x_pos.length} lettery={y} i={xindex} key={`letter-${x_pos.x}${xindex}`} transition={transition}/>		 
         );
       }
       return true;
@@ -99,7 +98,7 @@ export default class ReadingEntitiesD3V4 extends React.Component {
     let diagramattribute = diagramattributearray.map ((comment, index) => {
       let transition = d3.transition().duration(2050).ease(d3.easeCubicInOut);
       return (
-	       <DiagramAttribute x={comment.x} y={comment.y} name={comment.name} i={index} key={`letter-${comment.x}${index}`} transition={transition}/>		 		 
+	 <DiagramAttribute x={comment.x} y={comment.y} name={comment.name} i={index} key={`letter-${comment.x}${index}`} transition={transition}/>		 		 
       ); 
     });
     
@@ -112,7 +111,6 @@ export default class ReadingEntitiesD3V4 extends React.Component {
         let NewLengthStringI=23;
         let NewLengthStringII;
         let NewLengthString;
-    
         if (x_pos.name.length > lengthString) {
           NewLengthStringII = x_pos.name.length;
         } 
@@ -132,9 +130,8 @@ export default class ReadingEntitiesD3V4 extends React.Component {
         let x1 = x_pos.xpos;
         let y2 = x_pos.ypos + 30;
         let x2 = x_pos.xpos+NewLengthString;
-		
         return (
-	       <DiagramLine model={model} relationship={x_pos.relationship} attributes={x_pos.attributes} entity={x_pos.name} x1={x1} y1={y1} x2={x2} y2={y2} color={x_pos.color} length={x_pos.length}  i={xindex} key={`letter-${x_pos.x}${xindex}`} transition={transition}/>		 
+	  <DiagramLine model={model} relationship={x_pos.relationship} attributes={x_pos.attributes} entity={x_pos.name} x1={x1} y1={y1} x2={x2} y2={y2} color={x_pos.color} length={x_pos.length}  i={xindex} key={`letter-${x_pos.x}${xindex}`} transition={transition}/>		 
         );
       }
       return true;
@@ -157,7 +154,6 @@ export default class ReadingEntitiesD3V4 extends React.Component {
         let NewLengthStringI=23;
         let NewLengthStringII;
         let NewLengthString;
-    
         if (x_pos.name.length > lengthString) {
           NewLengthStringII = x_pos.name.length;
         } 
@@ -180,12 +176,10 @@ export default class ReadingEntitiesD3V4 extends React.Component {
         let new_y1;
         let new_y2;
         x_pos.relationship.map ((commentI) => {
-          let to = commentI.to;
-           //console.log(to);	  
+          let to = commentI.to;  
           let new_x;
           let new_y;
           let new_length;
-	  
           search_entity2.map ((commentII) => {
             if (to == commentII.name) {
               new_x = commentII.xpos;
@@ -227,7 +221,7 @@ export default class ReadingEntitiesD3V4 extends React.Component {
     let diagramrelationship = diagramrelationshiparray.map ((comment, index) => {
       let transition = d3.transition().duration(2050).ease(d3.easeCubicInOut);
       return (
-	       <DiagramRelationship x1={comment.new_x1} y1={comment.new_y1} x2={comment.new_x2} y2={comment.new_y2} i={index} key={`letter-${comment.new_x1}${index}`} transition={transition}/>		 		 
+	 <DiagramRelationship x1={comment.new_x1} y1={comment.new_y1} x2={comment.new_x2} y2={comment.new_y2} i={index} key={`letter-${comment.new_x1}${index}`} transition={transition}/>		 		 
       ); 
     });
     let entity = "Title";
