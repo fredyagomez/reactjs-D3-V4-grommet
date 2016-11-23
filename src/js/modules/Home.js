@@ -16,32 +16,19 @@ export default React.createClass({
   handleSubmit(event) {
     event.preventDefault();
     const path = `/Taxonomy`;
-	//const path = `/${userName}`;
-    //const path = `/repos/${userName}/${repo}`;
-    console.log(path);
     this.context.router.push(path);
 	
   },
   handleSubmit2(event) {
     event.preventDefault();
-    //const userName = event.target.elements[0].value;
-    //const repo = event.target.elements[1].value;
     const path = `/Discovery`;
-    //const path = `/repos/${userName}/${repo}`;
-    console.log(path);
     this.context.router.push(path);
 	
   },
   handleSubmit3(event) {
     event.preventDefault();
-    //const userName = event.target.elements[0].value;
-    //const repo = event.target.elements[1].value;
     const path = `/Policy`;
-	//const path = `/${userName}`;
-    //const path = `/repos/${userName}/${repo}`;
-    console.log(path);
     this.context.router.push(path);
-	
   },
   handleSubmit4(event) {
     event.preventDefault();
@@ -55,8 +42,6 @@ export default React.createClass({
   },
   handleSubmit5(event) {
     event.preventDefault();
-    //const userName = event.target.elements[0].value;
-    //const repo = event.target.elements[1].value;
     const path = `/Support`;
     //const path = `/repos/${userName}/${repo}`;
     console.log(path);
